@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CCC"
+    android:gravity="right" >
+
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="#000" >
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_weight="1" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <TableRow
+                    android:id="@+id/tableRow4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right" >
+
+                    <TextView
+                        android:id="@+id/Home_HEADER_top"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:text="تست"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right" >
+
+                    <TextView
+                        android:id="@+id/Home_HEADER_sub"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:text="تست"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+                </TableRow>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/Home_HEADER_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="matrix"
+                android:src="@drawable/ic_launcher" />
+        </TableRow>
+    </TableRow>
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/lv"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/tableRow1" >
+
+        
+    </com.handmark.pulltorefresh.library.PullToRefreshListView>
+
+</RelativeLayout>
